@@ -50,7 +50,8 @@ var GraphiQLWithExtensions = function (_Component) {
       schema: null,
       query: _this.props.query,
       variables: _this.props.variables,
-      operationName: _this.props.operationName,
+      response: _this.props.response,
+      editorTheme: _this.props.editorTheme,
       explorerIsOpen: false,
       disableExplorer: _this.props.disableExplorer
     }, _this._handleInspectOperation = function (cm, mousePos) {
@@ -142,7 +143,8 @@ var GraphiQLWithExtensions = function (_Component) {
       var _state = this.state,
           query = _state.query,
           variables = _state.variables,
-          operationName = _state.operationName,
+          response = _state.response,
+          editorTheme = _state.editorTheme,
           schema = _state.schema;
 
 
@@ -166,7 +168,8 @@ var GraphiQLWithExtensions = function (_Component) {
             schema: schema,
             query: query,
             variables: variables,
-            operationName: operationName,
+            response: response,
+            editorTheme: editorTheme,
             onEditQuery: this._handleEditQuery,
             onEditVariables: this._handleEditVariables,
             onEditOperationName: this._handleEditOperationName },
